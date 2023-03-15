@@ -31,5 +31,7 @@ func (p *natsAuthProvider) DataSources(_ context.Context) []func() datasource.Da
 }
 
 func (p *natsAuthProvider) Resources(_ context.Context) []func() resource.Resource {
-	return nil
+	return []func() resource.Resource{
+		NewOperatorResource,
+	}
 }

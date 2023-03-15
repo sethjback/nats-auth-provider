@@ -8,4 +8,6 @@ terraform {
 
 provider "natsauth" {}
 
-data "natsauth_operator" "example" {}
+resource "natsauth_operator" "example" {
+  name = "test"
+}
